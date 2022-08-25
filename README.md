@@ -1,14 +1,6 @@
-# Welcome to your CDK TypeScript project
+# MLB database (https://www.seanlahman.com/baseball-archive/statistics) 를 조회하기 위한 AWS-CDK (lambda) 를 이용한 REST-API 
 
-This is a blank project for CDK development with TypeScript.
+## Test endpoint - https://zp2cnsezhk.execute-api.us-west-2.amazonaws.com/prod/
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
+## POST /serach - will
 
-## Useful commands
-
-* `npm run build`   compile typescript to js
-* `npm run watch`   watch for changes and compile
-* `npm run test`    perform the jest unit tests
-* `cdk deploy`      deploy this stack to your default AWS account/region
-* `cdk diff`        compare deployed stack with current state
-* `cdk synth`       emits the synthesized CloudFormation template
