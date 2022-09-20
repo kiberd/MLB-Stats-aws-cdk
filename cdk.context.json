@@ -1,0 +1,5 @@
+{
+  "ssm:account=670740772710:parameterName=ELASTIC_BASEBALL_USERNAME:region=us-west-2": "elastic",
+  "ssm:account=670740772710:parameterName=ELASTIC_BASEBALL_PASSWORD:region=us-west-2": "POOypUnloNUPDogpCGcfuHUI",
+  "ssm:account=670740772710:parameterName=ELASTIC_BASEBALL_IP:region=us-west-2": "https://mlb-search.es.us-central1.gcp.cloud.es.io"
+}
