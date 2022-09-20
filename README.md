@@ -1,6 +1,8 @@
 ## AWS-CDK (lambda) 를 이용한 REST-API 
 
-### Routes (https://xvv72dx6xb.execute-api.us-west-2.amazonaws.com/prod)
+### Routes 
+
+https://xvv72dx6xb.execute-api.us-west-2.amazonaws.com/prod
 
 1. GET /batting/{playerid}
 
