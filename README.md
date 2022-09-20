@@ -1,8 +1,10 @@
 ## AWS-CDK (lambda) 를 이용한 REST-API 
 
-- https://cdkworkshop.com/20-typescript.html
+### Routes
 
-- Test endpoint - https://zp2cnsezhk.execute-api.us-west-2.amazonaws.com/prod/
+1. GET /batting/{playerid}
 
-- POST /serach - will
+- 해당하는 player id 타격기록 조회
+
+2. POST /search
 
