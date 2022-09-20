@@ -8,3 +8,13 @@
 
 2. POST /search
 
+```json
+
+{
+    "name_input": "ChanHo Park", 
+    "result_size": 20,
+    "starting_index": 0
+}
+
+
+```
