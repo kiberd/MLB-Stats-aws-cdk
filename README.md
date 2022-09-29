@@ -1,9 +1,12 @@
-## AWS-CDK (lambda) 를 이용한 메이저리그 기록 조회용 backend
+## MLB-stats backend by AWS cdk
+
+### Application 전체 구조도
+![diagram](https://user-images.githubusercontent.com/34852597/193076517-141717da-5656-41f7-adf1-b54768ecab72.png)
 
 ### Description
 
 - 메이저리그 dataset 중 하나인 Lehman`s database(https://www.seanlahman.com/baseball-archive/statistics) 를 가공하여 elasticsearch에 bulk insert
-- AWS-CDK를 이용하여 Lambda 함수(선수조회, 타격기록조회) 구현 및 Endpoint 설정
+- AWS-CDK를 이용하여 Lambda 함수(선수조회, 타격기록조회) 구현 및 Gateway 설정
 - Endpoint: https://xvv72dx6xb.execute-api.us-west-2.amazonaws.com/prod
 
 ### Routes 
