@@ -17,11 +17,11 @@
 
 ### Routes 
 
-1. GET /batting/{playerid}
+1. ***GET*** /batting/{playerid}
 
 - 해당하는 player 타격기록 조회
 
-2. POST /search
+2. ***POST*** /search
 
 - 해당하는 player 정보 조회
 
