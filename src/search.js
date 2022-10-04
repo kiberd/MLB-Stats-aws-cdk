@@ -1,8 +1,6 @@
 const fs = require("fs").promises;
 const { Client } = require("@elastic/elasticsearch");
 
-
-// Define client outside of lambda
 const client = new Client({
     node: process.env.ELASTICSEARCH_IP,
     auth: {
@@ -11,15 +9,12 @@ const client = new Client({
     },
 });
 
-
-// Lambda function associated with /search endpoint
 const searchPlayers = async (event) => {
+
     const event_body = JSON.parse(event.body);
     let name_input = event_body.name_input;
     let result_size = event_body.result_size;
     let starting_index = event_body.starting_index;
-
-
 
     const { body } = await client.search({
         index: "record",
@@ -33,8 +28,6 @@ const searchPlayers = async (event) => {
             },
         },
     });
-
-
 
     const response = {
         statusCode: 200,

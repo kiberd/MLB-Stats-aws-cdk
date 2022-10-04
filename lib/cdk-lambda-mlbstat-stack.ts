@@ -7,10 +7,10 @@ import * as lambda from "@aws-cdk/aws-lambda";
 const apigateway = require("@aws-cdk/aws-apigateway");
 
 export class CdkLambdaMlbstatStack extends cdk.Stack {
+
   constructor(scope: cdk.Construct, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
 
-    // Create a lambda function, associate with js file
     const getBattingStats = new lambda.Function(this, "getBattingStatsLambda", {
       code: new lambda.AssetCode("src"),
       handler: "battingStats.getBattingStats",
@@ -32,7 +32,6 @@ export class CdkLambdaMlbstatStack extends cdk.Stack {
       },
     });
 
-    // Create a lambda function, associate with js file
     const searchPlayers = new lambda.Function(this, "searchPlayers", {
       code: new lambda.AssetCode("src"),
       handler: "search.searchPlayers",
@@ -54,22 +53,19 @@ export class CdkLambdaMlbstatStack extends cdk.Stack {
       },
     });
 
-    // Create API Gateway resource
+    
     const api = new apigateway.RestApi(this, "baseballAPI", {
       restApiName: "Baseball Stats REST API",
     });
 
-    // Set up /batting endpoint
     const batting = api.root.addResource("batting");
     const getBatting = batting.addResource("{playerId}");
     addCorsOptions(batting);
     addCorsOptions(getBatting);
-
-    // Set up /search endpoint
+    
     const search = api.root.addResource("search");
     addCorsOptions(search);
 
-    // Set up apiGateway/lambda integrations
     const getBattingIntegration = new apigateway.LambdaIntegration(
       getBattingStats
     );
@@ -77,7 +73,6 @@ export class CdkLambdaMlbstatStack extends cdk.Stack {
       searchPlayers
     );
 
-    // Associate each integration with HTTP verb
     getBatting.addMethod("GET", getBattingIntegration);
     search.addMethod("POST", searchPlayersIntegration);
   }
