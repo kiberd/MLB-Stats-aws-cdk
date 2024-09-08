@@ -11,7 +11,7 @@
 
 - AWS-cdk(Cloud Development Kit)를 활용하여 Lambda 함수(선수조회, 타격기록조회) 구현 및 API Gateway 설정
 
-- Endpoint: https://xvv72dx6xb.execute-api.us-west-2.amazonaws.com/prod
+- Endpoint: https://o4fqwq8ec6.execute-api.ap-southeast-2.amazonaws.com/prod
 
 ---
 
